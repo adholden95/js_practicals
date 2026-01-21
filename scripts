@@ -1,7 +1,41 @@
 const button1 = document.getElementById('primary-action-btn');
 
-button1.addEventListener('click', () => {button1.classList.add('btn-success');
+button1.addEventListener('click', function (e) {button1.classList.add('btn-success');
     button1.classList.remove('btn-primary');
     button1.textContent = 'Success!';
     event.preventDefault();
 });
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+const addButton = document.getElementById('increment-btn');
+const subtractButton = document.getElementById('decrement-btn');
+const counterValue = document.getElementById('counter-value');
+
+let count = 0;
+
+addButton.addEventListener('click', function() {
+    count++;
+    subtractButton.disabled = false
+    counterValue.textContent = count;
+});
+
+subtractButton.addEventListener('click', function() {
+    if (count === 0) {
+        subtractButton.disabled = true;
+    }
+    else {
+        count--;
+    }
+    counterValue.textContent = count;
+});
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+const alertBox = document.getElementById('alert-box');
+const alertBtn = document.getElementById('toggle-alert-btn');
+
+alertBtn.addEventListener('click', () => {alertBox.classList.toggle('d-none');
+});
+
+/////////////////////////////////////////////////////////////////////////////////////////////
