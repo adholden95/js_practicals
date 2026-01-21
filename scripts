@@ -39,3 +39,17 @@ alertBtn.addEventListener('click', () => {alertBox.classList.toggle('d-none');
 });
 
 /////////////////////////////////////////////////////////////////////////////////////////////
+
+const viewOne = document.querySelectorAll('[data-view=one]');
+const viewTwo = document.querySelectorAll('[data-view=two]');
+const viewText = document.getElementById('view-output');
+
+viewOne[0].addEventListener('click', function () {
+viewText.textContent = 'This is View One';
+})
+
+viewTwo[0].addEventListener('click', function () {
+viewText.textContent = 'This is View Two';
+})
+
+//////////////////////////////////////////////////////////////////////////////////////////////
