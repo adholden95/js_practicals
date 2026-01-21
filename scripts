@@ -45,11 +45,17 @@ const viewTwo = document.querySelectorAll('[data-view=two]');
 const viewText = document.getElementById('view-output');
 
 viewOne[0].addEventListener('click', function () {
+viewTwo[0].classList.remove('active');
 viewText.textContent = 'This is View One';
+viewOne[0].classList.add('active');
+
 })
 
 viewTwo[0].addEventListener('click', function () {
+viewOne[0].classList.remove('active');
 viewText.textContent = 'This is View Two';
+viewTwo[0].classList.add('active');
 })
 
 //////////////////////////////////////////////////////////////////////////////////////////////
+
