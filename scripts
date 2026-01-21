@@ -1,6 +1,7 @@
 const button1 = document.getElementById('primary-action-btn');
 
-button1.addEventListener('click', function (e) {button1.classList.add('btn-success');
+button1.addEventListener('click', function (e) {
+    button1.classList.add('btn-success');
     button1.classList.remove('btn-primary');
     button1.textContent = 'Success!';
     event.preventDefault();
@@ -35,7 +36,8 @@ subtractButton.addEventListener('click', function() {
 const alertBox = document.getElementById('alert-box');
 const alertBtn = document.getElementById('toggle-alert-btn');
 
-alertBtn.addEventListener('click', () => {alertBox.classList.toggle('d-none');
+alertBtn.addEventListener('click', () => {
+    alertBox.classList.toggle('d-none');
 });
 
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -48,7 +50,6 @@ viewOne[0].addEventListener('click', function () {
 viewTwo[0].classList.remove('active');
 viewText.textContent = 'This is View One';
 viewOne[0].classList.add('active');
-
 })
 
 viewTwo[0].addEventListener('click', function () {
