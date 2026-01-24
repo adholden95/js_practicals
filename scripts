@@ -1,6 +1,6 @@
 const button1 = document.getElementById('primary-action-btn');
 
-button1.addEventListener('click', function (e) {
+button1.addEventListener('click', function (event) {
     button1.classList.add('btn-success');
     button1.classList.remove('btn-primary');
     button1.textContent = 'Success!';
