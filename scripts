@@ -89,4 +89,14 @@ form.addEventListener('submit', function (event) {
         message.placeholder = '**Please enter your message here**';
         message.focus();
     }
+     else {
+        message.value = '';
+        emailField.value = '';
+        nameField.value = ''
+        alert('Success! Thank you for your submission');
+        event.preventDefault();        
+    }
 });
+
+///////////////////////////////////////////////////////////////////////////////////////
+
