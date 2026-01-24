@@ -4,6 +4,7 @@ button1.addEventListener('click', function (event) {
     button1.classList.add('btn-success');
     button1.classList.remove('btn-primary');
     button1.textContent = 'Success!';
+    button1.disabled = true;
     event.preventDefault();
 });
 
@@ -60,3 +61,32 @@ viewTwo[0].classList.add('active');
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 
+const form = document.querySelector('form')
+const nameField = document.getElementById('name');
+const emailField = document.getElementById('email');
+const message = document.getElementById('message');
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+
+form.addEventListener('submit', function (event) {
+    if (nameField.value === '') {
+        event.preventDefault();
+        nameField.placeholder = '**Please include your name!**';
+        nameField.focus();
+    }
+    else if (emailField.value === '') {
+        event.preventDefault();
+        emailField.placeholder = '**Please enter your email address**';
+        emailField.focus();
+    } 
+    else if (!emailPattern.test(emailField.value)) {
+        event.preventDefault();
+        emailField.value = '';
+        emailField.placeholder = '**Please enter a valid email address**';
+        emailField.focus();
+    }
+    else if (message.value === '') {
+        event.preventDefault();
+        message.placeholder = '**Please enter your message here**';
+        message.focus();
+    }
+});
